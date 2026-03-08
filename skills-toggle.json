@@ -1,0 +1,32 @@
+"skills": {
+    "allowBundled": [],
+    "entries": {
+      "coding-agent": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": false
+      },
+      "gemini": {
+        "enabled": false
+      },
+      "healthcheck": {
+        "enabled": false
+      },
+      "session-logs": {
+        "enabled": false
+      },
+      "skill-creator": {
+        "enabled": false
+      },
+      "tmux": {
+        "enabled": false
+      },
+      "video-frames": {
+        "enabled": false
+      },
+      "weather": {
+        "enabled": false
+      }
+    }
+  },

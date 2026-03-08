@@ -2,4 +2,4 @@
 
 xd, idk what im doing, but if it works it works
 
-if you have any tips, lmk! I need more knowledge
+if you have any tips, lmk!

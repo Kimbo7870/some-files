@@ -1,7 +1,8 @@
+# this is just for reference, depending on what models/time/machine ur working on, it'll look a bit different
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.2",
-    "lastTouchedAt": "2026-03-08T05:22:43.851Z"
+    "lastTouchedVersion": "2026.3.8", # make sure this version matches ur openclaw version
+    "lastTouchedAt": "2026-03-13T19:07:01.576Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-07T03:40:18.944Z",
@@ -19,8 +20,8 @@
           {
             "id": "gpt-oss:20b",
             "name": "gpt-oss:20b",
-            "contextWindow": 16384,
-            "maxTokens": 128
+            "contextWindow": 32000,
+            "maxTokens": 8192
           },
           {
             "id": "qwen2.5:0.5b",
@@ -61,7 +62,7 @@
       "compaction": {
         "mode": "safeguard"
       },
-      "timeoutSeconds": 40000,
+      "timeoutSeconds": 600,
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
@@ -110,6 +111,9 @@
             }
           }
         }
+      }
+      "inboundWorker": {
+        "runTimeoutMs": 1800000
       }
     }
   },

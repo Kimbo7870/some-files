@@ -1,0 +1,322 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.22",
+    "lastTouchedAt": "<REDACTED: timestamp>"
+  },
+  "env": {
+    "vars": {
+      "SEARXNG_BASE_URL": "<REDACTED: local SearXNG base URL>"
+    }
+  },
+  "wizard": {
+    "lastRunAt": "<REDACTED: timestamp>",
+    "lastRunVersion": "2026.3.22",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openai:default": {
+        "provider": "openai",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "baseUrl": "<REDACTED: local Ollama base URL>",
+        "apiKey": "<REDACTED: local Ollama API key or token>",
+        "api": "ollama",
+        "models": [
+          {
+            "id": "glm-4.7-flash:latest",
+            "name": "glm-4.7-flash:latest",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "qwen2.5:0.5b",
+            "name": "qwen2.5:0.5b",
+            "contextWindow": 16384,
+            "maxTokens": 128
+          },
+          {
+            "id": "qwen3.5:0.8b",
+            "name": "qwen3.5:0.8b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "qwen3.5:9b",
+            "name": "qwen3.5:9b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "qwen3.5:27b",
+            "name": "qwen3.5:27b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "granite4:3b",
+            "name": "granite4:3b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "ministral-3:3b",
+            "name": "ministral-3:3b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "mistral:7b",
+            "name": "mistral:7b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "nemotron-3-nano:latest",
+            "name": "nemotron-3-nano:latest",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "nemotron-mini:latest",
+            "name": "nemotron-mini:latest",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "gpt-oss:20b",
+            "name": "gpt-oss:20b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "deepseek-r1:latest",
+            "name": "deepseek-r1:latest",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "phi4-mini:3.8b",
+            "name": "phi4-mini:3.8b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "phi4:14b",
+            "name": "phi4:14b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "gemma3:270m",
+            "name": "gemma3:270m",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "gemma3:12b",
+            "name": "gemma3:12b",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "functiongemma:latest",
+            "name": "functiongemma:latest",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "lfm2:latest",
+            "name": "lfm2:latest",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          },
+          {
+            "id": "llama3.1:latest",
+            "name": "llama3.1:latest",
+            "contextWindow": 32000,
+            "maxTokens": 2048
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/glm-4.7-flash:latest"
+      },
+      "models": {
+        "ollama/qwen2.5:0.5b": {},
+        "ollama/glm-4.7-flash:latest": {},
+        "ollama/qwen3.5:0.8b": {},
+        "ollama/qwen3.5:9b": {},
+        "ollama/granite4:3b": {},
+        "ollama/ministral-3:3b": {},
+        "ollama/mistral:7b": {},
+        "ollama/nemotron-3-nano:latest": {},
+        "ollama/nemotron-mini:latest": {},
+        "ollama/gpt-oss:20b": {},
+        "ollama/deepseek-r1:latest": {},
+        "ollama/phi4-mini:3.8b": {},
+        "ollama/phi4:14b": {},
+        "ollama/gemma3:270m": {},
+        "ollama/gemma3:12b": {},
+        "ollama/functiongemma:latest": {},
+        "ollama/lfm2:latest": {},
+        "ollama/llama3.1:latest": {},
+        "ollama/qwen3.5:27b": {},
+        "openai/gpt-5.4": {
+          "alias": "GPT"
+        }
+      },
+      "workspace": "<REDACTED: local workspace path>",
+      "timeoutSeconds": 79200
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "allow": [
+      "group:fs",
+      "group:runtime",
+      "subagents",
+      "web_fetch"
+    ],
+    "web": {
+      "search": {
+        "enabled": false
+      },
+      "fetch": {
+        "enabled": true
+      }
+    },
+    "exec": {
+      "host": "gateway",
+      "security": "allowlist",
+      "ask": "off",
+      "notifyOnExit": true
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer",
+    "threadBindings": {
+      "enabled": true,
+      "idleHours": 24,
+      "maxAgeHours": 0
+    }
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "commands": {
+        "native": true
+      },
+      "token": "<REDACTED: Discord bot token>",
+      "groupPolicy": "allowlist",
+      "streaming": "off",
+      "guilds": {
+        "<REDACTED: Discord server ID>": {
+          "requireMention": false,
+          "users": [
+            "<REDACTED: Discord user ID>"
+          ],
+          "channels": {
+            "<REDACTED: Discord channel name 1>": {
+              "allow": true
+            },
+            "<REDACTED: Discord channel name 2>": {
+              "allow": true
+            },
+            "<REDACTED: Discord channel name 3>": {
+              "allow": true
+            }
+          }
+        }
+      },
+      "execApprovals": {
+        "enabled": false,
+        "approvers": [
+          "<REDACTED: Discord approver user ID>"
+        ],
+        "target": "both"
+      },
+      "threadBindings": {
+        "enabled": true,
+        "idleHours": 24,
+        "maxAgeHours": 0,
+        "spawnSubagentSessions": true
+      },
+      "inboundWorker": {
+        "runTimeoutMs": 82000000
+      }
+    }
+  },
+  "gateway": {
+    "port": "<REDACTED: local gateway port>",
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "<REDACTED: gateway auth token>"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "skills": {
+    "allowBundled": [],
+    "entries": {
+      "coding-agent": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": true
+      },
+      "gemini": {
+        "enabled": false
+      },
+      "healthcheck": {
+        "enabled": false
+      },
+      "session-logs": {
+        "enabled": false
+      },
+      "skill-creator": {
+        "enabled": false
+      },
+      "tmux": {
+        "enabled": false
+      },
+      "video-frames": {
+        "enabled": false
+      },
+      "weather": {
+        "enabled": false
+      }
+    }
+  }
+}
